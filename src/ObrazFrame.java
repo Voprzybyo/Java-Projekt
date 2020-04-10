@@ -10,7 +10,7 @@ import javax.swing.JFrame;
  
  		JPanel obrazPanel = new ObrazPanel();
  		add(obrazPanel);
- 
+ 		setLocation(500,200);
  		pack();
  		setVisible(true);
  	}

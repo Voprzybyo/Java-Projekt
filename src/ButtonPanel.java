@@ -8,31 +8,32 @@ import javax.swing.JButton;
  
  public class ButtonPanel extends JPanel{
  
- 	public static final int HEIGHT = 50;
- 	public static final int WIDTH = 400;
- 	private JButton greenButton;
- 	private JButton blueButton;
- 	private JButton redButton;
+ 	public static final int HEIGHT = 100;
+ 	public static final int WIDTH = 200;
+ 	private JButton Button1;
+ 	private JButton Button2;
+ 	private JButton Button3;
  
  	private JPanel buttonPanel;
  
  	public ButtonPanel() {
- 		greenButton = new GreenButton();
- 		blueButton = new BlueButton();
- 		redButton = new RedButton();
+ 		
+ 		Button1 = new Button1();
+ 		Button2 = new Button2();
+ 		Button3 = new Button3();
  
  		buttonPanel = this;
  
  		setLayout(new FlowLayout());
  		setPreferredSize(new Dimension(WIDTH, HEIGHT));
- 		add(greenButton);
- 		add(blueButton);
- 		add(redButton);
+ 		add(Button1);
+ 		add(Button2);
+ 		add(Button3);
  	}
  
- 	class GreenButton extends JButton implements ActionListener {
+ 	class Button1 extends JButton implements ActionListener {
  
- 		GreenButton() {
+ 		Button1() {
  			super("Co to jest?");
  			setFont(new Font("Helvetica", Font.BOLD, 15));
  			addActionListener(this);
@@ -49,9 +50,9 @@ import javax.swing.JButton;
  		}
  	}
  
- 	class BlueButton extends JButton implements ActionListener {
+ 	class Button2 extends JButton implements ActionListener {
  
- 		BlueButton() {
+ 		Button2() {
  			super("POLSKA");
  			setFont(new Font("Helvetica", Font.BOLD, 15));
  			addActionListener(this);
@@ -64,9 +65,9 @@ import javax.swing.JButton;
  		}
  	}
  
- 	class RedButton extends JButton implements ActionListener {
+ 	class Button3 extends JButton implements ActionListener {
  
- 		RedButton() {
+ 		Button3() {
  			super("ŒWIAT");
  			setFont(new Font("Helvetica", Font.BOLD, 15));
  			addActionListener(this);

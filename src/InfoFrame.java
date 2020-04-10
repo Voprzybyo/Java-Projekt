@@ -23,50 +23,50 @@ public class InfoFrame extends JFrame  {
  	}
 	
 	public static void RamkaInformacyjnaPolska() {
-		 JFrame jf = new JFrame("STATYSTYKI");
+		
+		 JFrame jf = new JFrame("POLSKA STATS");
 		 jf.setLayout(new FlowLayout());
-
-		 	d = new JDialog(jf , "STATYSTYKI W POLSCE", true);  
-	        d.setLayout( new FlowLayout() );  
-	       
+		 JPanel panel = new JPanel();
+		 jf.add(panel);
+		
+	 
 	        s = "<html>Statystyki w Polsce<br><br>";
 	        s += "ZAKA¯ENIA: " + MainClass.Dane1.get(0) + "<br>";
 	        s += "ŒMIERCI: " + MainClass.Dane1.get(1) + "<br>";
 	        s += "WYLECZONYCH: " + MainClass.Dane1.get(2) + "<br></html>\"";
 	        
-	        d.add( new JLabel (s) ,SwingConstants.CENTER);  
-	        d.setSize(200,200);  
-	        d.setLocation(600,400);
-	        d.setFont(new Font("Helvetica", Font.BOLD, 35));
-	        d.setVisible(true);  
+	        JLabel tekst = new JLabel(s);
+	        panel.add(tekst);  
+	        panel.setSize(200,200);  
+	      
+	        tekst.setFont(new Font("Helvetica", Font.BOLD, 35));
 	        
+	     jf.setLocation(600,400);
 		 jf.pack();
 		 jf.setVisible(true);
-		 jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		 d.setDefaultCloseOperation(JDialog.EXIT_ON_CLOSE);
 		 }
 	
-	public static void RamkaInformacyjnaSwiat() {
-		 JFrame jf2 = new JFrame("RAMKA3");
-		 jf2.setLayout(new FlowLayout());
-
-		 	d = new JDialog(jf2 , "STATYSTYKI NA ŒWIECIE", true);  
-	        d.setLayout( new FlowLayout() );  
-	       
-	        s = "<html>Statystyki na œwiecie<br><br>";
-	        s += "ZAKA¯ENIA: " + MainClass.Dane2.get(0) + "<br>";
-	        s += "ŒMIERCI: " + MainClass.Dane2.get(1) + "<br>";
-	        s += "WYLECZONYCH: " + MainClass.Dane2.get(2) + "<br></html>\"";
-	        
-	        d.add( new JLabel (s) ,SwingConstants.CENTER); 
-	        d.setLocation(600,400);
-	        d.setSize(300,200);  
-	       
-	        d.setVisible(true);  
-	        
-		 jf2.pack();
-		 jf2.setVisible(true);
-		 jf2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		 public static void RamkaInformacyjnaSwiat() {
+			 JFrame jf = new JFrame("ŒWIAT STATS");
+			 jf.setLayout(new FlowLayout());
+			 JPanel panel = new JPanel();
+			 jf.add(panel);
+			
+		 
+		        s = "<html>Statystyki na œwiecie<br><br>";
+		        s += "ZAKA¯ENIA: " + MainClass.Dane2.get(0) + "<br>";
+		        s += "ŒMIERCI: " + MainClass.Dane2.get(1)+ "<br>";
+		        s += "WYLECZONYCH: " + MainClass.Dane2.get(2) + "<br></html>\"";
+		        
+		        JLabel tekst = new JLabel(s);
+		        panel.add(tekst);  
+		        panel.setSize(200,200);  
+		       
+		        tekst.setFont(new Font("Helvetica", Font.BOLD, 35));
+		        
+		     jf.setLocation(600,400);
+			 jf.pack();
+			 jf.setVisible(true);
 		 }
 	
 }
