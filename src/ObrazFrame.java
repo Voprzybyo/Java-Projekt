@@ -8,8 +8,8 @@ public class ObrazFrame extends JFrame {
         super("COVID-19");		//Konstruktor klasy nadrzêdnej
 
         JPanel obrazPanel = new ObrazPanel();
-        add(obrazPanel);
-        setLocation(500,200);
+        add(obrazPanel);		//Dodanie panelu do Ramki
+        setLocation(500,200);	//Po³o¿enie lewego górnego rogu okna
         pack();					//Metoda pack() ustala rozmiar okna tak, aby mieœci³y siê w nim wszystkie widoczne komponenty.
         setVisible(true);
     }
