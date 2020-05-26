@@ -49,12 +49,12 @@ public class InfoFrame extends JFrame  {
         jf.add(panel);							//Dodanie panelu do ramki
 
         
-        /*Wpisanie do zmiennej s danych do wyswietlania w nowootwartej ramce*/
+        /*Wpisanie do zmiennej s danych do wyswietlania w utworzonej ramce*/
         s = "<html>Statystyki na Œwiecie<br><br>";
         s += "ZAKA¯ENIA: " + MainClass.Dane2.get(0) + "<br>";
         s += "ZGONY: " + MainClass.Dane2.get(1)+ "<br>";
         s += "WYLECZONYCH: " + MainClass.Dane2.get(2) + "<br></html>\"";
-        logger.info("Z³o¿ono napis do wyœwietlenia");
+        logger.debug("Z³o¿ono napis do wyœwietlenia");
         
         JLabel tekst = new JLabel(s);			//Takie jakby rzutowanie string na tekst mog¹cy byæ wyœwietlony
         panel.add(tekst);						//Dodatnie tekstu do panelu

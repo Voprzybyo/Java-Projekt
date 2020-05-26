@@ -19,7 +19,7 @@ public class ButtonPanel extends JPanel{
     private JButton Button2;
     private JButton Button3;
 
-    static Logger logger = Logger.getLogger(ButtonPanel.class);
+    static Logger logger = Logger.getLogger(ButtonPanel.class);		//Logger dla klasy ButtonPanel
     
     public ButtonPanel() {
 
@@ -47,17 +47,18 @@ public class ButtonPanel extends JPanel{
         Button1() {
             super("Co to jest?"); 							//Konstruktor klasy nadrzêdnej
             setFont(new Font("Helvetica", Font.BOLD, 15));
-            addActionListener(this); 						//event handler
+            addActionListener(this); 						//event handler --> taki callback wywo³uj¹cy metode actionPerformed
         }
 
         public void actionPerformed(ActionEvent e) {
             try {
-            	logger.info("Przycisk 1 --> Wywo³ano metode wyœwietlaj¹c¹ obraz");
+            	logger.debug("Przycisk 1 --> Wywo³ano metode wyœwietlaj¹c¹ obraz");
                 new ObrazFrame();							//Wywo³anie metody otwieraj¹cej obraz
                 
             } catch (IOException e1) {
-                e1.printStackTrace();						//Pomaga œledziæ wyj¹tek --> Mówi, która metoda powoduje b³¹d
-                
+            	
+            	logger.error("Wyj¹tek --> Nie uda³o siê pobraæ i wyœwietliæ obrazu");
+             //   e1.printStackTrace();						//Pomaga œledziæ wyj¹tek --> Mówi, która metoda powoduje b³¹d
             }
         }
     }
@@ -68,12 +69,11 @@ public class ButtonPanel extends JPanel{
         Button2() {
             super("POLSKA");								//Konstruktor klasy nadrzêdnej
             setFont(new Font("Helvetica", Font.BOLD, 15));
-            addActionListener(this);						//event handler
+            addActionListener(this);						//event handler --> taki callback wywo³uj¹cy metode actionPerformed
         }
 
-        public void actionPerformed(ActionEvent e) {
-        	
-        	logger.info("Przycisk 2 --> Wywo³ano metode wyœwietlaj¹c¹ info o Polsce");
+        public void actionPerformed(ActionEvent e) {  	 
+        	logger.debug("Przycisk 2 --> Wywo³ano metode wyœwietlaj¹c¹ info o Polsce");
             InfoFrame.RamkaInformacyjnaPolska();			//Wywo³anie metody wyœwietlaj¹cej ramke
         }
     }
@@ -84,11 +84,11 @@ public class ButtonPanel extends JPanel{
         Button3() {
             super("ŒWIAT");									//Konstruktor klasy nadrzêdnej
             setFont(new Font("Helvetica", Font.BOLD, 15));
-            addActionListener(this); 						//event handler
+            addActionListener(this); 						//event handler --> taki callback wywo³uj¹cy metode actionPerformed
         }
 
         public void actionPerformed(ActionEvent e) {
-            logger.info("Przycisk 3 --> Wywo³ano metode wyœwietlaj¹c¹ info o Œwiecie");
+            logger.debug("Przycisk 3 --> Wywo³ano metode wyœwietlaj¹c¹ info o Œwiecie");
             InfoFrame.RamkaInformacyjnaSwiat();				//Wywo³anie metody wyœwietlaj¹cej ramke
         }
     }
